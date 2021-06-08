@@ -30,6 +30,7 @@ const buttonStyle = createUseStyles({
 });
 
 const Button = (props) => {
+	// eslint-disable-next-line
 	const { label, value, bkgColor, color, isOp, className } = props;
 	const style = buttonStyle(color, bkgColor);
 

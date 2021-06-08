@@ -1,0 +1,16 @@
+.home {
+	background-color: #3a4764;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	padding: 70px 0;
+	height: 100vh;
+	.calc-home {
+		max-width: 500px;
+		margin: 0 auto;
+		.top-bar {
+			// margin-top: 50px;
+			display: flex;
+		}
+	}
+}

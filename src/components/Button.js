@@ -3,14 +3,18 @@ import { createUseStyles } from 'react-jss';
 
 const buttonStyle = createUseStyles({
 	btn: (props) => ({
-		color: props.color,
-		background: props.bkgColor,
+		// color: props.color,
+		// background: props.bkgColor,
 		padding: '8px 15px',
-		fontWeight: '600',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		fontWeight: '800',
 		textAlign: 'center',
 		margin: '10px 15px',
 		borderRadius: '5px',
 		fontSize: '1.5rem',
+		boxShadow: '0 3px #b4a597',
 		'&:hover': {
 			cursor: 'pointer',
 		},
@@ -18,14 +22,21 @@ const buttonStyle = createUseStyles({
 	// label: (props) => ({
 	// 	color: props.color,
 	// }),
+	del: {
+		boxShadow: '0 3px #404e72 !important',
+		fontSize: '1.1rem !important',
+	},
 	reset: {
 		gridColumn: '1 / span 2',
-		fontSize: '1rem',
-		color: '#fff' /* not working */,
+		color: '#fff !important',
+		boxShadow: '0 3px #404e72 !important',
+		padding: '14px !important',
+		fontSize: '1.1rem !important',
 	},
 	equal: {
-		fontSize: '1rem' /* not working */,
 		gridColumn: '3 / span 2',
+		boxShadow: '0 3px #93261a !important',
+		fontSize: '1.1rem !important',
 	},
 });
 
@@ -49,14 +60,14 @@ const Button = (props) => {
 			</div> */}
 			<div
 				className={
-					className ? `${style.btn} ${style[className]}` : style.btn
+					className ? `${style[className]} ${style.btn}` : style.btn
 				}
 				style={{
 					color: color,
 					background: bkgColor,
 				}}
 			>
-				<span className={style.label}>{label}</span>
+				<p className={style.label}>{label}</p>
 			</div>
 		</>
 	);

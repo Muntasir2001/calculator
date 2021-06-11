@@ -47,6 +47,7 @@ const Numpad = () => {
 					bkgColor={'#637097'}
 					color={'#eae3dc'}
 					isOp={true}
+					className={'del'}
 				/>
 				<Button
 					label={'4'}
@@ -135,7 +136,7 @@ const Numpad = () => {
 				<Button
 					label={'RESET'}
 					value={'RESET'}
-					bkgColor={'#eae3dc'}
+					bkgColor={'#637097'}
 					color={'#444b5a'}
 					isOp={true}
 					className={'reset'}

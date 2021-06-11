@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 
 const screenStyle = createUseStyles({
@@ -20,12 +20,31 @@ const screenStyle = createUseStyles({
 });
 
 const Screen = () => {
+	const [value, setValue] = useState();
 	const style = screenStyle();
+
+	const onChange = (e) => {
+		// const re = /^[0-9\b]+$/;
+
+		// if (e.target.value === '' || re.test(e.target.value)) {
+		// 	setValue({ value: e.target.value });
+		// }
+		const number = e.target.validity.valid ? e.target.value : value;
+
+		setValue(number);
+	};
 
 	return (
 		<>
 			<div className={style.inputScreen}>
-				<input className={style.input} type='text' name='number' />
+				<input
+					className={style.input}
+					type='text'
+					name='number'
+					pattern='[0-9]*'
+					onInput={onChange}
+					value={value}
+				/>
 			</div>
 		</>
 	);

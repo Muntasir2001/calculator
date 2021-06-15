@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss';
 import Screen from './Screen';
 import Numpad from './Numpad';
 import Button from './Button';
+// eslint-disable-next-line
 import Error from './Error';
 
 const calcStyle = createUseStyles({
@@ -19,6 +20,7 @@ const MainCalc = () => {
 
 	const calculate = () => {
 		try {
+			// eslint-disable-next-line
 			const result = eval(data);
 			setData(result);
 		} catch (err) {

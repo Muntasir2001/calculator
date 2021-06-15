@@ -52,6 +52,7 @@ const Screen = (props) => {
 					pattern='[0-9]*'
 					// onInput={onChange}
 					// onChange={onChange}
+					placeholder='0'
 					value={num}
 				/>
 			</div>

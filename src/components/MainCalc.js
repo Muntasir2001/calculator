@@ -16,7 +16,7 @@ const calcStyle = createUseStyles({
 
 const MainCalc = () => {
 	const style = calcStyle();
-	const [data, setData] = useState();
+	const [data, setData] = useState('');
 
 	const calculate = () => {
 		try {

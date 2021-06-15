@@ -42,12 +42,12 @@ const buttonStyle = createUseStyles({
 
 const Button = (props) => {
 	// eslint-disable-next-line
-	const { label, value, bkgColor, color, isOp, className } = props;
+	const { label, value, bkgColor, color, isOp, className, onClick } = props;
 	const style = buttonStyle(color, bkgColor);
 
 	return (
 		<>
-			{/* <div
+			<div
 				className={
 					className ? `${style.btn} ${style[className]}` : style.btn
 				}
@@ -55,10 +55,12 @@ const Button = (props) => {
 					color: color,
 					background: bkgColor,
 				}}
+				value={value}
+				onClick={onClick}
 			>
 				{label}
-			</div> */}
-			<div
+			</div>
+			{/* <div
 				className={
 					className ? `${style[className]} ${style.btn}` : style.btn
 				}
@@ -66,9 +68,13 @@ const Button = (props) => {
 					color: color,
 					background: bkgColor,
 				}}
+				value={value}
+				onClick={onClick}
 			>
-				<p className={style.label}>{label}</p>
-			</div>
+				<p className={style.label} value={value} onClick={onClick}>
+					{label}
+				</p>
+			</div> */}
 		</>
 	);
 };

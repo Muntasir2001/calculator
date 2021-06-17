@@ -44,6 +44,11 @@ const MainCalc = () => {
 				calculate();
 				break;
 			case 'DEL':
+				const newData = data.split('');
+				newData.pop();
+				setData((data) => {
+					return (data = newData.join(''));
+				});
 				break;
 			default:
 				setData((val) => {

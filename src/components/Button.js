@@ -18,6 +18,7 @@ const buttonStyle = createUseStyles({
 		'&:hover': {
 			cursor: 'pointer',
 		},
+		userSelect: 'none',
 	}),
 	// label: (props) => ({
 	// 	color: props.color,

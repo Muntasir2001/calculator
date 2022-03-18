@@ -13,7 +13,7 @@ const Title = () => {
 
 	return (
 		<>
-			<h2 className={style.title}>calc</h2>
+			<h2 className={style.title}>Calculator</h2>
 		</>
 	);
 };
